@@ -1,12 +1,10 @@
-import React from 'react'
 
-class APIService extends React.Component {
-    constructor(props) {
-        super(props)
+class APIService  {
+    constructor() {
         this.proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
+      //  this.proxyUrl = ''; 
     }
     
-
     async getdeck() {
       return  fetch(this.proxyUrl + 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
                 .then(res=>res.json())

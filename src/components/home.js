@@ -23,7 +23,9 @@ class Home extends React.Component {
     }
 
     startGame() {
+        console.log('home')
         this.APIService.getdeck().then(res=>{
+            console.log('>>>',res)
             var PlayerOneObjectDeck = res.cards.slice(0, 26),
             PlayerTwoObjectDeck = res.cards.slice(26, 52),
                 playerOneDeck = PlayerOneObjectDeck.map(function(e){return e.code}).join(','),
@@ -39,6 +41,7 @@ class Home extends React.Component {
 
             this.APIService.addingToPiles(res.deck_id, 'computer',playerTwoDeck)
             this.APIService.addingToPiles(res.deck_id, 'player',playerOneDeck)
+
 
         })
     }

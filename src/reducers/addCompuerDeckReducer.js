@@ -6,6 +6,7 @@ export default (state = [], action) => {
       case actionTypes.COMPUTER_CARDS:
       return [
         Object.assign({}, action.computer)
+        
       ];
       default:
             return state;

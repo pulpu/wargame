@@ -9,7 +9,7 @@ import configureStore from "./store";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<Provider  store={configureStore()}>
+ReactDOM.render(<Provider  store={configureStore}>
                     <Router />
                 </Provider>, document.getElementById('root'));
 
